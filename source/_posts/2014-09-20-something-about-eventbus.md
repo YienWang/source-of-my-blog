@@ -13,7 +13,7 @@ EventBus,也即事件总线。在[wiki][event_monitor]上有关于Event Monitor�
 个人猜测事件总线这种说法源至于计算机内常用的几个总线结构【比如CPU总线，IO总线等】。他们有一个共同的特定就是负责传递某种 object 到指定的地方。比如数据总线负责的是CPU到RAM，地址总线负责的是RAM到RAM传递数据。
 
 这条词条的分类是在操作系统这个目录下，这也可以理解成是在操作系统较早地使用了这种模式。  
-在Java内置的包中也有一种EventBus,但是它是基于接口的。Google在Guava中实现了一套自己的[EventBus][guava_eventbus],Google实现的总线库更具可读性,因为它使用Annotion标记订阅者和生产者，方法名可以自定义，更具意义。  
+在Java内置的包中也有一种EventBus,但它是基于接口的。Google在Guava中实现了一套自己的[EventBus][guava_eventbus],Google实现的总线库更具可读性,因为它使用Annotion标记订阅者和生产者，方法名可以自定义，更具意义。  
 
 Android中的EventBus
 ----------------
