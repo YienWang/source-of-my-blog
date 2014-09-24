@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Android ListView 优化"
-date: 2014-08-25 09:24:56 +0800
+title: "ListView 优化"
+date: 2014-08-25 09:24:56
 comments: true
-tags: Android ListView 调优
+tags: [Android,ListView,调优]
 ---
 关于ListView的优化，想必都是老生长谈了。什么“面试必问”的问题之类的，感觉这个问题也差不多该自己总计下了。
 <!-- more -->
-1. **复用convertView及使用ViewHolder**
+**复用convertView及使用ViewHolder**
 ------
 这是最最最简单的方式，也是一提到优化就会想起来的，但也是非常具有效率的方式。（还有一个是尽量使布局flat-这个就不另外提出来了）  
 在Adapter中getView的时候，先判断convertView是否为空，再进行分别操作。这样子inflate的操作其实也就是前面几次而已（根据第一屏的能容纳的项目数来定）。  
@@ -36,7 +36,7 @@ tags: Android ListView 调优
 		}
 	}
 ```
-2. **使用恰当大小的Bitmap及缓存Adapter中使用的图片。**
+**使用恰当大小的Bitmap及缓存Adapter中使用的图片。**
 ------------
 读取图片时缩放成适当的大小：
 ```java
@@ -88,10 +88,10 @@ class BitmapCache {
 	}
 }
 ```
-3. **不要在adapter的getView中做过多操作（包括创建对象）**
+**不要在adapter的getView中做过多操作（包括创建对象）**
 ---------------
 因为adapter的getView是在ListView每次获取对象的时候都会调用的，因此里面创建对象跟一些逻辑操作都需要尽量地少。另外，可以结合上面的convertView，在判断convertView为空的情况中，给ViewHolder中的控件设置统一的属性（当然我也不觉得这有必要就是了）
-4. **滑动时暂停加载，滑动结束再继续加载图片**
+**滑动时暂停加载，滑动结束再继续加载图片**
 ------------------
 这个适用于异步加载图片的情况（或者说如果需要图片，使用异步加载才是正确的选择）。  
 异步加载，其实也就是将获取图片（从缓存中获取，从资源中获取，从网络中获取等等），操作图片（缩放图片）这样的费时操作放到另外的线程中执行。  
@@ -110,7 +110,7 @@ listView.setOnScrollListener(new OnScrollListener() {
 	}
 );
 ```
-5. **使用Curadapter获取字符串时使用copyStringToBuffer**
+**使用Curadapter获取字符串时使用copyStringToBuffer**
 ---------------
 这个优化仅限于CurorAdapter，因为需要频繁getString的adapter只有从数据库获取数据的时候。优化的原理也很简单，跟StringBuilder拼接字符串类似，减少了创建对象的次数。举个例子：
 ```java
@@ -137,7 +137,7 @@ private static classViewHolder {
 ```
 
 **补充：**
-================
+==================
 **关于Android中使用的内存大小** [AndroidHeap][AndroidHeap]
 ------------
 简单点说，获取的方式有两种：
@@ -156,7 +156,7 @@ int memoryClass = am.getMemoryClass();
 
 > Soft references are for implementing **memory-sensitive** caches, weak references are for implementing **canonicalizing mappings that do not prevent their keys (or values) from being reclaimed**, and phantom references are for **scheduling pre-mortem cleanup actions in a more flexible way** than is possible with the Java finalization mechanism.  --from [JavaDoc][JavaDoc]
 
-####参考的资料
+##参考的资料
 [Tricks to boost performance of list view][1] (墙外）
 
 

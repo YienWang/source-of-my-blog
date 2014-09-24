@@ -2,7 +2,7 @@
 layout: post
 title:  "搭好了，我的github博客"
 date:   2014-08-23 17:14:00
-categories: blog jekyll
+tags: 博客
 ---
 
 折腾了一个下午之后终于把本地的Jekyll环境搭好并且运行起来了，可喜可贺。  

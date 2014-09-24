@@ -1,6 +1,6 @@
 title: Android面试前的一点准备
 date: 2014-09-21 07:55:20
-tags: [android, 面试前, 三句说清]
+tags: [Android, 面试前, 三句说清]
 ---
 关于几个容易忘记的概念性常识。不定期更新
 1. **LaunchMode**
@@ -32,7 +32,7 @@ SurfaceView
 1. 使用SurfaceView能够有更好的绘图性能【SurfaceView使用了更多的缓存---相较于View共有一个缓存【未进确认别乱说= =】
 
 
-#### **与View的异同** ####
+### **与View的异同** ###
 简单点说，就是SurfaceView不支持HW acceleration，而View可以。SurfaceView使用单独的线程，而View是主线程。可见这里：[difference between surfaceview and view][difference]。  
 另外也可跟GLSurfaceView进行对比,后者虽然是SurfaceView但是支持HWA：[advantage of GLSurfaceView][advantage]
 

@@ -1,6 +1,6 @@
 title: EventBus二三事
 date: 2014-09-20 18:51:59
-tags: [android,EventBus,开源]
+tags: [Android,EventBus,开源]
 ---
 废话很多的前言
 ---------------

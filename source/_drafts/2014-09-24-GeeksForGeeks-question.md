@@ -1,6 +1,6 @@
 title: GeeksForGeeks
 date: 2014-09-24 09:39:38
-tags: [GeeksForGeeks, 算法]
+tags: [GeeksForGeeks]
 ---
 数组
 -------------

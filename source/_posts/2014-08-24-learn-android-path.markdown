@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "learn android path"
-date: 2014-08-24 16:37:39 +0800
+title: "用Path画个小太极"
+date: 2014-08-24 16:37:39
 comments: true
 tags: [Android,Path]
 ---

@@ -2,7 +2,6 @@
 layout: post
 title:  "打鸡血=。="
 date:   2014-08-24 02:14:00
-categories: zhihu
 ---
 
 >绝大多数时候，凑合着做完，比完美地半途而废要好。

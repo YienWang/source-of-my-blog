@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "learn android class loader"
-date: 2014-08-30 13:09:11 +0800
+date: 2014-08-30 13:09:11
 comments: true
-categories: android class loader
+tags: Android
 ---
 
 昨晚看到有人在讲这个话题，突然间也就想要研究一下了。Android的类加载机制跟Java的有什么异同。

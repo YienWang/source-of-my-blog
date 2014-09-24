@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "初探 Android AIDL"
-date: 2014-08-28 11:04:39 +0800
+date: 2014-08-28 11:04:39
 comments: true
 tags: [Android,AIDL]
 ---
