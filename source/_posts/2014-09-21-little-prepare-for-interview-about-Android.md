@@ -1,6 +1,6 @@
 title: Android面试前的一点准备
 date: 2014-09-21 07:55:20
-tags: [Android, 面试前, 三句说清]
+tags: [android, 面试前, 三句说清]
 ---
 关于几个容易忘记的概念性常识。不定期更新
 1. **LaunchMode**

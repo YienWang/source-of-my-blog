@@ -3,7 +3,7 @@ layout: post
 title: "初探 Android AIDL"
 date: 2014-08-28 11:04:39
 comments: true
-tags: [Android,AIDL]
+tags: [android,AIDL]
 ---
 AIDL, *Android Interface Defination Languge*, Android的接口定义语言，是为了简化为跨进程通信写代理代码所准备的一种语言。  
 只要写了aidl文件且满足语法，那么IDE就可以自动生成对应IInterface文件，使用的时候直接继承来实现这个抽象类来进行IPC（跨进程通信），非常方便~

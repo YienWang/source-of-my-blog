@@ -1,9 +1,8 @@
 ---
-layout: post
-title: "learn android class loader"
+title: Android和Java的类加载器
 date: 2014-08-30 13:09:11
 comments: true
-tags: Android
+tags: [android,java,classloader]
 ---
 
 昨晚看到有人在讲这个话题，突然间也就想要研究一下了。Android的类加载机制跟Java的有什么异同。
@@ -12,15 +11,14 @@ tags: Android
 #### 关于Java的类加载机制
 ##### Java的类加载器类型：
 1. 启动类加载器 Bootstrap ClassLoader  
-	这个类无法被程序直接引用。如果需要由它加载，在自定义类加载器的时候只需要把null作为双亲加载器的引用传入即可。  
-	默认在lib文件夹下
+	这个类无法被程序直接引用。如果需要由它加载，在自定义类加载器的时候只需要把null作为双亲加载器的引用传入即可。默认在lib文件夹下
 2. 扩展类加载器 Extension ClassLoader  
 	默认在在lib\ext文件夹下
 3. 应用程序类加载器 Application ClassLoader  
 	加载在ClassPath路径上所指定的类库
 
 
-Java使用了双亲委派模型来进行类加载。  
+Java使用了**双亲委派模型**来进行类加载。  
 当一个类加载器收到了类加载的请求，它首先会将请求委托给父类加载器去完成，层层递归。因而所有的类都会被启动类加载器查找过，如果父加载器找不到才交给子加载去加载。
 
 ##### Java类加载的过程：

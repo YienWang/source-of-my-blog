@@ -1,6 +1,6 @@
 title: GeeksQuiz的Java题目
 date: 2014-09-23 23:04:57
-tags: [GeeksQuiz, Java, 问题]
+tags: [GeeksQuiz, java, 问题]
 ---
 刚好看到GeeksQuiz上有Java的题目，感觉会蛮好玩的，所以做了下。  
 有些细节感觉自己真的没有注意到，稍微记录下。题目在这里：[GeeksQuiz][geekquiz]

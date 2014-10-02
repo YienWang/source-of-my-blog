@@ -3,7 +3,7 @@ layout: post
 title: "ListView 优化"
 date: 2014-08-25 09:24:56
 comments: true
-tags: [Android,ListView,调优]
+tags: [android,ListView,调优]
 ---
 关于ListView的优化，想必都是老生长谈了。什么“面试必问”的问题之类的，感觉这个问题也差不多该自己总计下了。
 <!-- more -->

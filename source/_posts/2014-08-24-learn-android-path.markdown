@@ -3,7 +3,7 @@ layout: post
 title: "用Path画个小太极"
 date: 2014-08-24 16:37:39
 comments: true
-tags: [Android,Path]
+tags: [android,Path]
 ---
 
 最近两天一直在折腾博客，想着弄好之后就来写这一篇东西。我想要用Canvas跟Path画出一个太极，并使其旋转。  

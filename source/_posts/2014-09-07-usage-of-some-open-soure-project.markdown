@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "常用开源库的使用"
-date: 2014-09-07 11:49:51 +0800
+date: 2014-09-07 11:49:51
 comments: true
-tags: [开源,Android]
+tags: [开源,android]
 ---
 常用开源库的介绍，自己的备忘录兼使用之后自己的小总结。不定期更新。  
 

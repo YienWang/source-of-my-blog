@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "android media player"
-date: 2014-09-08 10:46:45 +0800
+date: 2014-09-08 10:46:45
+tags: [android]
 comments: true
-categories: 
 ---
 关于Android的MediaPlayer。
 很常见的类，不过稍微有点忘了。所以小总结一下，以防自己忘记。

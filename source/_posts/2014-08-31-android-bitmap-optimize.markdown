@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Android Bitmap 和 OOM"
 date: 2014-08-31 12:42:22 
 comments: true
-tags: [Android,Bitmap] 
+tags: [android,Bitmap] 
 ---
 关于Android的图片格式，似乎有很多东西可以讲的。基本上一讲到面试，就会问到怎么处理大图片。  
 刚在群上看到一个问题：*“在加载一张10M图片的时候要如何避免OOM?”*  
