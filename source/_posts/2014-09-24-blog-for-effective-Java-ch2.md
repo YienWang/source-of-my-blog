@@ -1,4 +1,4 @@
-title: 读《Effiective Java》 Chap2
+title: 读《Effiective Java》：创建和销毁对象
 date: 2014-09-24 20:43:48
 tags: [java,读书,笔记]
 ---
