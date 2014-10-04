@@ -98,7 +98,7 @@ Dog d1 = (Dog)o;
 向上转型通常都是成功的，但是向下转型却不一定。所以向下转的时候常用的操作就是用`instanceof`判断类型是否正确。  
 
 ### 关于`<init>`方法
-从一篇不大靠谱的[文章][4]看到了`<init>`是如何生成的,
+从一篇不大靠谱的[文章][4]看到了`<init>`是如何生成的,它的初始化顺序本身就有问题。
 
 [1]: http://www.oschina.net/question/941896_173532
 [2]: http://www.cnblogs.com/lijunamneg/archive/2013/02/05/2893111.html
