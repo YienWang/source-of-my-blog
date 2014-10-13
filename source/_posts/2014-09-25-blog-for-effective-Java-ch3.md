@@ -1,4 +1,4 @@
-title: 读《Effiective Java》：对于所有对象都通用的方法&类和接口
+title: 读《Effiective Java》：对于所有对象都通用的方法
 date: 2014-09-25 10:54:04
 tags: [java,读书,笔记]
 ---
@@ -35,6 +35,3 @@ String content = m.get(new Count(5));
 - 一旦实现了Compareable接口，就可以与大量泛型算法（如`Array.sort()`）和依赖与该接口实现的集合实现进行协作（如TreeSet）
 - 【self】Comparable要求的规则跟equal类似，想要写出完美的接口要验证很多东西。还是觉得简单实在更好
 
-第四章 类和接口
-----------------
-### 第13条 使类和成员的可访问性更小
