@@ -77,7 +77,7 @@ if __name__ == "__main__":
 - 对于输出，也无法直接使用双引号或单引号，必须使用空格，否则会报错：`SyntaxError: invalid syntax`
 
 ### PyQt5 不再支持Phonon
-- 从PyQt开始，多媒体都是使用`QtMultimedia`这个类来做了，具体可以看官方的demo（默认会是在`\PyQt5\examples\multimedia\audiodevices`）
+- 从PyQt5.x开始，多媒体都是使用`QtMultimedia`这个类来做了，具体可以看官方的demo（默认会是在`\PyQt5\examples\multimedia\audiodevices`）
 
 
 ### QtDesigner使用小技巧

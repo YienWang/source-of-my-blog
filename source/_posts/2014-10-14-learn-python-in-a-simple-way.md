@@ -1,4 +1,4 @@
-title: Python的快速入门-《A Byte of Python》
+title: Python的快速入门--《A Byte of Python》
 date: 2014-10-14 14:57:46
 category: 读书
 tags: [python,笔记,入门,我的思考,问题]
