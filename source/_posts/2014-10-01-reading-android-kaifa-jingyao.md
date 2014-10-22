@@ -221,12 +221,13 @@ IntentFilter.setPriority(1000); // -1000~+1000
 - P241，通过`getWriteableDatabase()`和`getReadableDatabase()`获取的数据库均可以读写，而不是后者仅限于读。作者理解有误
 - P285，调用`Bitmap.recycle()`之后并不是马上释放了内存。只是告知这个Bitmap可以回收而已。在3.0之前这个操作的意义还在于释放native peer（这也可能是作者说马上释放了内存的原因）。而在3.0之后，Bitmap是在VM的堆中分配的，可以不调用`recycle()`，而只要将Bitmap的引用置为NULL即可。吗
 - 出现多次的错误：Application的`onTerminal()`事件只会在AVD中触发，真实设备是不会发生该事件的。作者把这个事件理解成跟`finalize()`类似的概念了。
-
+- 10.22 update: P110，作者关于onSaveInstanceState调用时机的图是有错的，作者给出的图只适合Honeycomb之前的android。具体参考[这里][8]
 
 问题
 ---------------
 写完这篇博客之后尚未解决的疑问，估计要研究一下
-1. `onSaveInstanceState()`到底会做什么？作者一开始说存到磁盘，后又说是使用bundle形式保存，明显存在矛盾。另外，关于`onSaveInstance()`与`onRestoreInstanceState()`的调用时机也不明确。作者说如果是用户按下HOME键主动退出是不会调用的，果真如此吗？
+1. `onSaveInstanceState()`到底会做什么？作者一开始说存到磁盘，后又说是使用bundle形式保存，明显存在矛盾。另外，关于`onSaveInstance()`与`onRestoreInstanceState()`的调用时机也不明确。作者说如果是用户按下HOME键主动退出是不会调用的，果真如此吗？   
+[关于onSaveInstanceState的那点事][9]
 2. SQlite是表级别的锁，那么支持并发吗?Locked状态是怎么回事？
 3. 图文混排如何实现？
 
@@ -242,3 +243,5 @@ IntentFilter.setPriority(1000); // -1000~+1000
 [5]: http://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html
 [6]: http://stackoverflow.com/questions/7142921/usage-of-androidprocess
 [7]: http://developer.android.com/guide/components/processes-and-threads.html#Lifecycle
+[8]: {{root_url}}/2014/10/07/something-about-onsaveinstancestate/#什么时候
+[9]: {{root_url}}/2014/10/07/something-about-onsaveinstancestate/

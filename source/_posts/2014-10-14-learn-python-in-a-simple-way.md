@@ -35,7 +35,7 @@ raw_string\n
 - 除了其他语言常见的操作符及用法，python还有自己独特的地方
 - `*`可用于一个数字与一个字符串，用于复制相同的字符串n遍
 - `**`用于计算幂
-- `not`用于取反  【SELF】：注意bool是int的子类= =所以0是False
+- `not`用于取反  【SELF】：注意bool是int的子类= =所以0是`False`
 - `and`用于与操作，支持短路求值
 - `or`用于或操作，支持短路求值
 - 赋值具有右结合性：`a=b=c`即`a=(b=c)`
@@ -74,18 +74,18 @@ for i in list(range(1, 5)):
 x = 50
 # 没有引入全局变量x，引用的是局部变量
 def func_local(x, value):
-    print x # 50
+    print x      # 50
     x = value
 # 全局变量需要先声明再使用，否则有warning: name 'x' is used prior to global declaration
 # 无法定义 global x = 2
 def func_global(value):
     global x
-    print x # 50
+    print x      # 50
     x = value
 func_local(x, 2) # 50
-print x 	  # 50
-func_global(2) # 50
-print x # 2   # 2
+print x          # 50
+func_global(2)   # 50
+print x # 2      # 2
 ```
 默认参数值
 ```python
@@ -106,13 +106,13 @@ callHelloTo(someone="Brain", content="Nice to Meet you")
 ```python
 # numbers是list，而kcount是dictionary
 def calsum(init = 0, *numbers, **kcount):
-   '''cal input value sum'''
-	result = init
-	for value in numbers:
-		result += value
-	for key in kcount:
-		result += kcount[key]
-	print ("result is {}".format(result))
+    '''cal input value sum'''
+    result = init
+    for value in numbers:
+        result += value
+    for key in kcount:
+        result += kcount[key]
+    print ("result is {}".format(result))
 calsum(1,2,3,4,5,d=-15) # result is 0
 ```
 return语句
@@ -131,17 +131,17 @@ DocStrings
 - 也可使用`from ... import *`的形式导入所有公有域和公有方法 
 - 定义一个通用的module通常需要遵守一些公有约定，比如私有域中包含版本信息，作者信息等。
 - 可以通过`dir()`方法获取模块所有域的信息。括号中不包含模块即代表查询本模块。
-- package是module的集合。在每个模块上都有一个\_\_init\_\_.py文件说明模块信息
+- package是module的集合。在每个模块的同级目录下都有一个\_\_init\_\_.py文件说明模块信息
 
 ### 数据结构
 Python内置四种数据结构，list，tuples，dictionary，set。  
-- list是可变的，即列表可增删，排序等。
+- list是可变的，即列表元素可增删，排序等
 - tuple是不可变的，在初始化之后即不可再改动
 - dictionary是key-value，添加时不能保证有序。key必须为不可变对象
-- set是简单对象的无序序列，可用于集合操作（set本身就支持集合操作）
+- set是简单对象的无序序列，可用于集合操作（set自身提供了大量集合操作）
 
 关于sequence
-- list，tuple，string都是sequence，都具有集合操作（比如`in`和`not in`等），另外也支持下标取值。下标可以为负值，代表逆方向取值。
+- list，tuple，string都是sequence，都支持集合操作（比如`in`和`not in`等），另外也支持下标取值。下标可以为负值，代表逆方向取值。
 - sequence也支持slicing操作，即`[:]`和`[::]`。通过该操作返回的是原sequence的一个拷贝。可以通过`[::-1]`轻易获得一个逆序。
 
 关于引用
@@ -160,24 +160,24 @@ Python内置四种数据结构，list，tuples，dictionary，set。
 # encoding=utf-8
 class Person:
     '''A person is the base of everyone'''
-	count = 0                 # 类变量在外部声明
-	def __init__(self, name):
-		self.name = name
-		Person.count += 1     # 使用是使用类引用变量
-	@classmethod              # 也可以用staticmethod，但调用时再传入类名。
-	def getCount(cls):
-		print ("Total: {}".format(cls.count))
-	def call(self):
-	   '''Show person info'''
-		print ("Name is {}".format(self.name))
+    count = 0                 # 类变量在外部声明
+    def __init__(self, name):
+        self.name = name
+        Person.count += 1     # 使用时使用类引用变量
+    @classmethod              # 也可以用staticmethod，但调用时再传入类名。
+    def getCount(cls):
+        print ("Total: {}".format(cls.count))
+    def call(self):
+        '''Show person info'''
+        print ("Name is {}".format(self.name))
 # Python也支持多重继承，只需要在声明时增加类即可
 class Student(Person):
-	def __init__(self, name, school):
-		Person.__init__(self, name) # 先调用基类初始化。没有super
-		self.school = school
-	def call(self):
-		Person.call(self)           # 调用基类方法时也需要传入self
-		print("{}'s shool is {}".format(self.name, self.school))
+    def __init__(self, name, school):
+        Person.__init__(self, name) # 先调用基类初始化。没有super关键字
+        self.school = school
+    def call(self):
+        Person.call(self)           # 调用基类方法时也需要传入self
+        print ("{}'s shool is {}".format(self.name, self.school))
 ```
 ### 输入和输出
 - `raw_input()`用于获取用户输入
@@ -223,7 +223,7 @@ a, b = b, a
 - **List Comprehension**：
 ```python
 c = list(range(1, 100))
-result = [i for i in c if i % 2==0 or i % 9 == 0]
+result = [i for i in c if i % 2 == 0 or i % 9 == 0]
 print result # 100以内所有能被2或9整除的数
 ```
 - **Tubles and dictionaries as arguments**：前面已使用

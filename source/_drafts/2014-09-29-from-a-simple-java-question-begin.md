@@ -1,6 +1,6 @@
 title: 从一个简单的问题开始讨论Java继承初始化
 date: 2014-09-29 08:59:37
-tags: [java,classloader,继承]
+tags: [java,初始化,继承]
 ---
 前言
 --------------
