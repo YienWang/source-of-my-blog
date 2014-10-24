@@ -196,7 +196,7 @@ P80, 在*'Saving Data Across Rotation'*这一节中，提到的onSaveInstanceSta
 
 资料
 --------------
-[同ID导致ScrollView导致位置信息被覆盖][2]
+[同ID导致ScrollView位置信息被覆盖][2]
 《Android Programming: The Big Nerd Ranch Guide》 
 
 [1]: {{root_url}}/2014/10/01/reading-android-kaifa-jingyao/
